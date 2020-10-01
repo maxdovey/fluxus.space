@@ -40,12 +40,14 @@ app.get('/up', function(req, res) {
 // });
 
 
-// Download the helper library from https://www.twilio.com/docs/node/install
-// Your Account Sid and Auth Token from twilio.com/console
-// DANGER! This is insecure. See http://twil.io/secure
-const accountSid = 'ACf22add1be2030783a9b782ede87c78a2';
-const authToken = '4027a6a7e5bbaf286d8d7b9c5b0a718a';
+// These are your accountSid and authToken from https://www.twilio.com/console
+const accountSid = process.env.TWILIO_ACCOUNT_SID;
+const authToken = process.env.TWILIO_AUTH_TOKEN;
+
 const client = require('twilio')(accountSid, authToken);
+// const client = require('twilio')(process.env.accountSid, process.env.authToken);
+
+
 
 
 app.post('/submit', function(req,res) {
@@ -59,13 +61,13 @@ app.post('/submit', function(req,res) {
         }
         else {
             console.log('number Successfully saved')
-            // client.messages
-            // .create({
-            //    body: "You have signed up to receive weekly Fluxus Performances via SMS. To end this service reply 'STOP' at any time.",
-            //    from: '+447429378021',
-            //    to: int_number
-            //  })
-            // .then(message => console.log(message.sid));
+            client.messages
+            .create({
+               body: "You have signed up to receive weekly Fluxus Performances via SMS. To end this service reply 'STOP' at any time.",
+               from: '+447429378021',
+               to: int_number
+             })
+            .then(message => console.log(message.sid));
         }
     })
   });
