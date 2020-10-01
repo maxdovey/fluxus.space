@@ -1,0 +1,35 @@
+<script type="text/javascript">
+    const directoryPath =  ('./assets/artists/')
+
+function Choose_Artist(data,success) {
+    var Chosen_Artist = artists_list[Math.floor(Math.random() * artists_list.length)];
+    var path = 'assets/artists/'+Chosen_Artist;
+    console.log(path)
+    $.getJSON(path, function(data){
+    const JSONObject = JSON.parse(data);
+    console.log(JSONObject);
+    // data = data;
+    // key = (Object.keys(JSONObject))
+    // values = (Object.values(JSONObject))
+  })
+  .done(function() {
+  artist_name = Chosen_Artist.slice(0, -5)
+
+}).fail(function(){
+  
+    console.log("An error has occurred.");
+  
+  })
+    // const JSONObject = JSON.parse(data);    
+    // key = (Object.keys(JSONObject))
+    // values = (Object.values(JSONObject))
+    // artist_name = Chosen_Artist.slice(0,-5)
+    // success = true;
+    // if (success) {
+    //     var randomnumber = Math.floor(Math.random() * (key.length))
+    //     var msg_body = (key[randomnumber]+"\n\n"+values[randomnumber]+"\n"+artist_name)
+    //     console.log(msg_body)
+    //     // Send_SMS(msg_body);
+    // }
+}
+Choose_Artist();

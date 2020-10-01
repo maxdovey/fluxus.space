@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head'); %>
+</head>
+<body class="container">
+
+<header>
+    <%- include('../partials/header'); %>
+</header>
+
+<main>
+    <div class="menu">
+    <h1>Subscribe</h1>
+    <p>To receive a weekly text message describing a performance event by a Fluxus artist enter your mobile phone number below. <br> 
+     It will not cost you anything and you will receive one fluxus performance every seven days. <br> 
+        your number will be stored anonymously and you can cancel the service at any time. </p>
+    <form method ='POST' action='/submit' onsubmit=SaveNumber()>
+        <div class="form-group row">
+            <label for="inputEmail3" class="col-sm-2 col-form-label">🇬🇧Telephone number:</label>
+            <div class="col-sm-10">
+            <input type="tel" autocomplete="tel" name="telephone"  class="form-control" id="inputtel" placeholder="07816147120" required>
+            </div>
+        </div>
+        <!-- <div class="form-group row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-10">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="gridCheck1">
+                <label class="form-check-label" for="gridCheck1">
+                By checking this box I consent to submitting my mobile phone number. All numbers will be stored anonymously and will be deleted upon cancellation of this service. 
+                </label>
+            </div>
+            </div>
+        </div> -->
+        <div class="form-group row">
+            <div class="col-sm-10">
+            <button type="submit" onclick="Error()"class="btn btn-primary">Sign up</button>
+            </div>
+        </div>
+        </form>
+    </div>
+</main>
+
+<footer>
+    <%- include('../partials/footer'); %>
+</footer>
+
+</body>
+<script>
+function Error(){
+$("h1").text("Uh Oh!..")
+$(".menu p").text("Looks like the number wasn't successfully saved. Try Again, make sure to include all 11 digits")
+ }
+</script>
+</html>

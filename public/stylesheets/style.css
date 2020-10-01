@@ -1,0 +1,83 @@
+/* Always set the map height explicitly to define the size of the div
+ * element that contains the map. */
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Mitr:wght@300&family=Ramabhadra&family=Rubik+Mono+One&display=swap');
+
+html{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+
+}
+body {
+    background:#FF4F00  ;
+    color: #333333;
+    font-family: 'mitr', sans-serif;
+    font-size: 1.2rem;
+}
+
+.container{
+width: 100%;
+margin: 0 auto;
+}
+
+.menu {
+    background: #ffffff;
+    max-width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+    border-style: solid;
+    border-color: rgb(15, 15, 15);
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: 0.6em;
+  }
+.menu p {
+    margin: 1rem 1rem 1rem 1rem;
+}
+h1 {
+    padding: 0px 40px 40px 40px;
+    font-family: 'Rubik Mono One', sans-serif;
+    text-align: center;
+ }
+ .form-group row {
+     font-size: 0.6em;
+ }
+.form-control {
+    display: inline-flex;
+    width: 80%;
+}
+.input-group{
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    width: auto;
+    text-align: center;
+    vertical-align: middle;
+}
+.btn-primary {
+    background: #0324fc;
+}
+header {
+    text-align: center;
+    margin-top: 20px;;
+}
+header button{
+    background: #0324fc ;
+    text-align: center;
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Rubik Mono One', sans-serif;
+    font-size: 1.2rem;
+    color: white;
+  }
+  

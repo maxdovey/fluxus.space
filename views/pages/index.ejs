@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head'); %>
+</head>
+<body class="container">
+
+<header>
+    <%- include('../partials/header'); %>
+</header>
+
+<main>
+    <div class="menu">
+        <h1>This is the home page</h1>
+        <div id ="artwork">Artwork</div>
+        <div id ="artist">Artist</div>
+
+    </div>
+</main>
+
+<footer>
+    <%- include('../partials/footer'); %>
+</footer>
+
+</body>
+<script>
+const directoryPath =  ('/assets/artists/')
+
+function Choose_Artist(data,success) {
+    var Chosen_Artist = artists_list[Math.floor(Math.random() * artists_list.length)];
+    var path = directoryPath+Chosen_Artist;
+    console.log(path)
+    $.getJSON(path, function(data){
+    const JSONObject = JSON.parse(data);
+    console.log(JSONObject);
+    data = data;
+    key = (Object.keys(JSONObject))
+    values = (Object.values(JSONObject))
+  })
+  .done(function() {
+  artist_name = Chosen_Artist.slice(0, -5)
+  var randomnumber = Math.floor(Math.random() * (key.length))
+  $("h1").text(key[randomnumber])
+  $("#artwork").text(values[randomnumber])
+  $("#artist").text(artist_name)
+
+
+})
+.fail(function(){
+  
+    console.log("An error has occurred.");
+  
+  })
+};
+Choose_Artist();
+</script>
+
+
+</html>
+

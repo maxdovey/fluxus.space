@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Mitr:wght@300&family=Ramabhadra&family=Rubik+Mono+One&display=swap');
+
+ html{
+   margin: 0;
+   padding: 0;
+   border: 0;
+   font-size: 100%;
+   vertical-align: baseline;
+ }
+
+body {
+    background:#FF4F00;
+     color: #333333;
+     font-family: 'Rubik Mono One', sans-serif;
+     font-size: 1rem;
+ }
+
+h1 {
+    padding: 1rem 1rem 1rem 1rem;
+    font-family: 'Rubik Mono One', sans-serif;
+    text-align: center;
+ }
+h3 {
+   font-family: 'Rubik Mono One', sans-serif;
+   margin: 0.5rem 1rem 0.5rem 1rem;
+   font-size: 1.2rem;
+}
+#artwork {
+    padding: 1rem 1rem 1rem 1rem;
+    font-size: 1em;
+}
+#artist {
+    padding: 1rem 1rem 1rem 1rem;
+    font-weight: bold;
+    font-size: 1em;
+}
+ .container{
+ width: 100%;
+ margin: 0 auto;
+ }
+ 
+.menu {
+    background:#fffcfb;
+    font-family: 'Ramabhadra';
+    max-width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+    border-style: solid;
+    border-radius: 0.8rem;
+    border-color: #0324fc;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: 1em;
+}
+ .menu p {
+     margin: 1rem 1rem 1rem 1rem;
+ }
+.menu li {
+  list-style-type: none;
+}
+#credits {
+  font-size: 0.6rem;
+}
+#credits a{
+  text-decoration: none;
+  color: #0324fc;
+}
+ .form-control {
+     display: inline-flex;
+     width: 80%;
+     height: 4rem;
+     font-size: 1em;
+ }
+ .input-group{
+     margin-left: 20px;
+     margin-right: 20px;
+     margin-top: 20px;
+     width: auto;
+     text-align: center;
+     vertical-align: middle;
+     
+ }
+.btn-primary {
+    background:#FF4F00; 
+    color: #ffffff;
+    box-sizing: border-box;
+    border-style: solid;
+    border-radius: 0.8rem;
+    border-color: #0324fc;
+    font-family: 'Rubik Mono One', sans-serif;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding: 1rem 1rem 1rem 1rem;
+}
+
+.btn-primary:hover{
+     background:#ffffff;
+}
+
+
+
+header {
+     text-align: center;
+     margin-top: 20px;;
+ }
+
+header button{
+     background:#FF4F00 ;
+     text-align: center;
+     width: 150px;
+     height: 150px;
+     border-radius: 100%;
+     border-color: #0324fc;
+     display: inline-flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     font-family: 'Rubik Mono One', sans-serif;
+     font-size: 1.2rem;
+     color: white;
+   }
+   button:active {
+    background:  #FFFFFF ;
+    color: #000000;
+    padding: 0.4rem 0.5rem 0.1rem 0.5rem;
+}
+button:hover {
+    background:  #FFFFFF ;
+    color: #000000;
+  }
+
+button:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+@media(hover: hover) and (pointer: fine) {
+  button:hover {
+    background:  #FFFFFF ;
+    color: #000000;
+  }
+}
+
+.navbar {
+  position: relative;
+  text-align: center;
+}
+/* .navbar a{
+  text-align: center;
+} */
+
+.footer {
+flex-shrink: 0;
+width: 100%;
+background-color: #0324fc;
+position: absolute;
+bottom: 0;
+}
+.footer p {
+margin-left: 20px;
+text-align: center;
+font-family: 'Ramabhadra';
+font-size: 0.8rem;
+color: rgb(255, 254, 254);
+}
+
+.footer a {
+  color:#FF4F00;
+  text-decoration: none;
+}
+  

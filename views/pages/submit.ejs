@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head'); %>
+</head>
+<body class="container">
+
+<header>
+    <%- include('../partials/header'); %>
+</header>
+
+<main>
+    <div class="menu">
+    <h1>Thankyou</h1>
+    <p>Your number has been submitted and you should shortly recieve a confirmation text.</p>
+    <!-- <form method ='POST' action='/submit' onsubmit=SaveNumber()>
+        <div class="form-group row">
+            <label for="inputEmail3" class="col-sm-2 col-form-label">Telephone number:</label>
+            <div class="col-sm-10">
+            <input type="tel" autocomplete="tel" name="telephone"  class="form-control" id="inputtel" placeholder="07816147120" required>
+            </div>
+        </div> -->
+        <!-- <div class="form-group row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-10">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="gridCheck1">
+                <label class="form-check-label" for="gridCheck1">
+                By checking this box I consent to submitting my mobile phone number. All numbers will be stored anonymously and will be deleted upon cancellation of this service. 
+                </label>
+            </div>
+            </div>
+        </div> -->
+        <div class="form-group row">
+            <div class="col-sm-10">
+            <p>no text?</p>
+            <button type="submit" onclick="location.href='mailto:maxdovey@gmail.com'"class="btn btn-primary">message me</button>
+            </div>
+        </div>
+        </form>
+    </div>
+</main>
+
+<footer>
+    <%- include('../partials/footer'); %>
+</footer>
+
+</body>
+</html>

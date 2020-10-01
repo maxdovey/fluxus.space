@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head'); %>
+</head>
+<body class="container">
+
+<header>
+    <%- include('../partials/header'); %>
+</header>
+
+<main>
+    <div class="menu">
+        <h1>Artists</h1>
+        <p></p>
+    </div>
+</main>
+
+<footer>
+    <%- include('../partials/footer'); %>
+</footer>
+
+</body>
+<script>
+
+artists_list.forEach(element => {
+    var artist_name = element.slice(0, -5)
+    $(".menu p").append("<li>" + artist_name + "</li>") 
+});
+// var i;
+// for (i = 0; i < artists_list.length; i++) {
+//     var artist_name =(artists_list[i].slice(0, -5))
+//     console.log(artist_name)
+//     $("h1").text(artist_name)
+// }
+</script>
+</html>
