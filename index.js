@@ -6,7 +6,10 @@ var fs = require('fs')
 const directoryPath =  ('/assets/artists/')
 const path = require('path'); 
 
+require('dotenv').config();
 
+// console.log('The twillio account SID is:', process.env.TWILIO_ACCOUNT_SID);
+// console.log('The twillio auth is:', process.env.TWILIO_AUTH_TOKEN);
 
 // app.use(express.static('public'))
 // set the view engine to ejs
@@ -51,11 +54,15 @@ const client = require('twilio')(accountSid, authToken);
 
 
 app.post('/submit', function(req,res) {
-    int_number = "+44" + req.body.telephone.slice(1,);
-    console.log(int_number)
+    number = req.body.telephone
+    if (number.startsWith('0')){
+      number = "+44" + number.slice(1,);
+      // continue
+    }
+    console.log(number)
     res.render('pages/submit');
     //change this file directory on the server to '/home/max/flux-fone/numbers.txt'
-    fs.appendFile('numbers.txt',int_number.toString()+ ',', function (err) {
+    fs.appendFile('/home/max/flux-fone/numbers.txt',number.toString()+ ',', function (err) {
         if (err) {
             console.log('saving number error')
         }
@@ -65,12 +72,12 @@ app.post('/submit', function(req,res) {
             .create({
                body: "You have signed up to receive weekly Fluxus Performances via SMS. To end this service reply 'STOP' at any time.",
                from: '+447429378021',
-               to: int_number
+               to: number
              })
             .then(message => console.log(message.sid));
         }
     })
-  });
+});
 
 
 app.listen(3000, () => {
