@@ -80,4 +80,11 @@ header button{
     font-size: 1.2rem;
     color: white;
   }
-  
+
+@media only screen and (min-device-width: 560px) and (max-device-width: 1136px) and (-webkit-min-device-pixel-ratio: 2) {
+    /* iPhone 5 only */
+    h1 {
+        font-size: 1rem;
+        padding: 0px 20px 20px 20px;
+    }
+}

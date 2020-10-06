@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Mitr:wght@300&family=Ramabhadra&family=Rubik+Mono+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&&family=Ramabhadra&family=Rubik+Mono+One&display=swap');
 
  html{
    margin: 0;
@@ -170,4 +170,18 @@ color: rgb(255, 254, 254);
   color:#FF4F00;
   text-decoration: none;
 }
-  
+
+
+/* max-width 640px, mobile-only styles, use when QAing mobile issues */
+@media only screen and (max-width: 40em) {
+  h1 {
+    font-size: 1.2rem;
+    /* padding: 0px 0px 0px 0px; */
+}
+}
+@media only screen and (max-width: 321px){
+  .navbar{
+    display: flex;
+    max-width: 80%;
+  }
+}
