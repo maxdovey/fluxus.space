@@ -55,11 +55,6 @@ const client = require('twilio')(accountSid, authToken);
 
 app.post('/submit', function(req,res) {
     number = req.body.telephone
-    // if (number[0] != '+'){
-    //   console.log('add dialing code!')
-    //   res.render('pages/up');
-    //   return
-    // }
     console.log(number)
     res.render('pages/submit');
     //change this file directory on the server to '/home/max/flux-fone/numbers.txt'
