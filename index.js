@@ -69,13 +69,13 @@ app.post('/submit', function(req,res) {
         }
         else {
             console.log('number Successfully saved')
-            // client.messages
-            // .create({
-            //    body: "You have signed up to receive weekly Fluxus Performances via SMS. To end this service reply 'STOP' at any time.",
-            //    from: '+447429378021',
-            //    to: number
-            //  })
-            // .then(message => console.log(message.sid));
+            client.messages
+            .create({
+               body: "You have signed up to receive weekly Fluxus Performances via SMS. To end this service reply 'STOP' at any time.",
+               from: '+447429378021',
+               to: number
+             })
+            .then(message => console.log(message.sid));
         }
     })
 });
