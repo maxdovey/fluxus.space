@@ -55,10 +55,11 @@ const client = require('twilio')(accountSid, authToken);
 
 app.post('/submit', function(req,res) {
     number = req.body.telephone
-    if (number.startsWith('0')){
-      number = "+44" + number.slice(1,);
-      // continue
-    }
+    // if (number[0] != '+'){
+    //   console.log('add dialing code!')
+    //   res.render('pages/up');
+    //   return
+    // }
     console.log(number)
     res.render('pages/submit');
     //change this file directory on the server to '/home/max/flux-fone/numbers.txt'
@@ -68,13 +69,13 @@ app.post('/submit', function(req,res) {
         }
         else {
             console.log('number Successfully saved')
-            client.messages
-            .create({
-               body: "You have signed up to receive weekly Fluxus Performances via SMS. To end this service reply 'STOP' at any time.",
-               from: '+447429378021',
-               to: number
-             })
-            .then(message => console.log(message.sid));
+            // client.messages
+            // .create({
+            //    body: "You have signed up to receive weekly Fluxus Performances via SMS. To end this service reply 'STOP' at any time.",
+            //    from: '+447429378021',
+            //    to: number
+            //  })
+            // .then(message => console.log(message.sid));
         }
     })
 });
